@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '5.3.9'
+}
+
+group = 'org.serenity.training'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '5.3.10'
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:$serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-screenplay:$serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:$serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-cucumber:$serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-ensure:$serenityVersion"
+    testImplementation "org.junit.platform:junit-platform-suite:1.12.2"
+    testImplementation "io.cucumber:cucumber-junit-platform-engine:7.22.2"
+}
+
+test {
+    useJUnitPlatform()
+}
