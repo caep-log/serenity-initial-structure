@@ -5,7 +5,7 @@ import net.serenitybdd.core.pages.PageObject;
 
 // para abrir el sitio en el navegador
 // tienes que definir el "default url"
-@DefaultUrl("https://www.saucedemo.com/")
+@DefaultUrl("https://mx.neivor.com/")
 public class LoginPage extends PageObject {
 
 }
